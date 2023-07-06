@@ -17,7 +17,61 @@ export function WeatherDetail({ data }) {
               <h3>Vel. do Vento</h3>
               <h3>{data.current.wind_kph} km/h</h3>
             </div>
-            <div className="">
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
+              <GiWindSlap fontSize={40} />
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
+            <div className="text-2xl">
+              <h3>Vel. do Vento</h3>
+              <h3>{data.current.wind_kph} km/h</h3>
+            </div>
+            <div>
               <GiWindSlap fontSize={40} />
             </div>
           </div>
