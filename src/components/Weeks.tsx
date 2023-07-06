@@ -14,6 +14,9 @@ export function Weeks({ data }) {
             {new Date(day.date).toLocaleString('pt-BR', { weekday: 'short' })}
           </p>
           <img src={day.day.condition.icon} alt={day.day.condition.text} />
+          <div>
+            <p>Máx {day.day.maxtemp_c.toFixed()}</p>
+          </div>
         </div>
       ))}
     </div>
