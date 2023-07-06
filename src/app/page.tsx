@@ -55,7 +55,7 @@ export default function Home() {
           <Weeks data={data} />
         </div>
         <div>
-          <WeatherDetail />
+          <WeatherDetail data={data} />
         </div>
       </>
     )
