@@ -16,7 +16,11 @@ export function Current({ data }) {
           <p className="text-white">{currentDate}</p>
         </div>
         <div>
-          <img src={weatherIcon} alt={data?.current?.condition?.text} />
+          <img
+            className="w-[50px] object-cover"
+            src={weatherIcon}
+            alt={data?.current?.condition?.text}
+          />
         </div>
       </div>
       <p className="text-5xl text-white">
