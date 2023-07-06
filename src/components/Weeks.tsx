@@ -1,4 +1,26 @@
-export function Weeks({ data }) {
+import React from 'react'
+
+interface DiaForecast {
+  date: string
+  day: {
+    condition: {
+      icon: string
+      text: string
+    }
+    maxtemp_c: number
+    mintemp_c: number
+  }
+}
+
+interface WeeksProps {
+  data: {
+    forecast: {
+      forecastday: DiaForecast[]
+    }
+  }
+}
+
+export function Weeks({ data }: WeeksProps) {
   if (!data || !data.forecast || !data.forecast.forecastday) {
     return null // ou exiba uma mensagem de erro adequada
   }
