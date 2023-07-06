@@ -15,7 +15,8 @@ export function Weeks({ data }) {
           </p>
           <img src={day.day.condition.icon} alt={day.day.condition.text} />
           <div>
-            <p>Máx {day.day.maxtemp_c.toFixed()}</p>
+            <p>Máx {day.day.maxtemp_c.toFixed()}°</p>
+            <p className="text-black/50">Min {day.day.mintemp_c.toFixed()}°</p>
           </div>
         </div>
       ))}
