@@ -1,5 +1,5 @@
 import { getCurrentDate } from '@/utils/currentDate'
-
+import { BiCurrentLocation } from 'react-icons/bi'
 export function Current({ data }) {
   const currentDate = getCurrentDate()
   const weatherIcon = data?.current?.condition?.icon
@@ -19,6 +19,10 @@ export function Current({ data }) {
           <img src={weatherIcon} alt={data?.current?.condition?.text} />
         </div>
       </div>
+      <p className="text-5xl text-white">
+        {data.current.temp_c.toFixed()}
+        <span>°</span>
+      </p>
     </div>
   )
 }
