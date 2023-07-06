@@ -23,10 +23,21 @@ export function Current({ data }) {
           />
         </div>
       </div>
-      <p className="text-5xl text-white">
-        {data.current.temp_c.toFixed()}
-        <span>°</span>
-      </p>
+      <div>
+        <p className="text-5xl text-white">
+          {data.current.temp_c.toFixed()}
+          <span>°</span>
+        </p>
+        <span className="text-white">{data.current.condition.text}</span>
+      </div>
+      <div>
+        <div className="flex items-center rounded-xl bg-white/90 px-2 py-2 text-black">
+          <BiCurrentLocation />
+          <span>
+            {data.location.name}, {data.location.region}
+          </span>
+        </div>
+      </div>
     </div>
   )
 }
