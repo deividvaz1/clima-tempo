@@ -1,6 +1,22 @@
 import { getCurrentDate } from '@/utils/currentDate'
 import { BiCurrentLocation } from 'react-icons/bi'
-export function Current({ data }) {
+interface CurrentProps {
+  data: {
+    current: {
+      condition: {
+        icon: string
+        text: string
+      }
+      temp_c: number
+    }
+    location: {
+      name: string
+      region: string
+    }
+  }
+}
+
+export function Current({ data }: CurrentProps) {
   const currentDate = getCurrentDate()
   const weatherIcon = data?.current?.condition?.icon
 

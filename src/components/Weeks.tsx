@@ -13,6 +13,7 @@ export function Weeks({ data }) {
           <p>
             {new Date(day.date).toLocaleString('pt-BR', { weekday: 'short' })}
           </p>
+          <img src={day.day.condition.icon} alt={day.day.condition.text} />
         </div>
       ))}
     </div>
