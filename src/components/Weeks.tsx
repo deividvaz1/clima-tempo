@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface DiaForecast {
   date: string
   day: {

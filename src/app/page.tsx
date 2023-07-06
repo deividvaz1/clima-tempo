@@ -50,7 +50,7 @@ export default function Home() {
   } else {
     content = (
       <>
-        <div>
+        <div className="flex flex-col items-center justify-between p-12 md:flex-row">
           <Current data={data} />
           <Weeks data={data} />
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
     )
   }
   return (
-    <div className="h-screen bg-gradient-to-r from-blue-500 to-blue-300 bg-cover">
+    <div className="h-fit bg-gradient-to-r from-blue-500 to-blue-300 bg-cover">
       <div className="flex h-fit w-full flex-col bg-white/25">
         {/* LOGO */}
         <div className="flex flex-col  items-center justify-between p-12 md:flex-row">
