@@ -12,7 +12,7 @@ export function Current({ data }) {
     <div className="mb-8 flex w-1/2 flex-col items-start gap-2 md:mb-0">
       <div className="flex items-center">
         <div>
-          <h1 className="text-3xl text-white">Today</h1>
+          <h1 className="text-3xl text-white">Hoje</h1>
           <p className="text-white">{currentDate}</p>
         </div>
         <div>
