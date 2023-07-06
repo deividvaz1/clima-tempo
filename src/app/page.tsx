@@ -2,9 +2,13 @@
 import React, { useState } from 'react'
 
 import { Input } from '@/components/Input'
+import { Current } from '@/components/Current'
+import { Weeks } from '@/components/Weeks'
+import { WeatherDetail } from '@/components/WeatherDetail'
 
 export default function Home() {
   const [data, setData] = useState({})
+
   const [location, setLocation] = useState('')
   const [error, setError] = useState('')
 
@@ -28,6 +32,34 @@ export default function Home() {
       }
     }
   }
+
+  let content
+  if (Object.keys(data).length === 0 && error === '') {
+    content = (
+      <div>
+        <h2>Bem-Vindo, confira como está o clima hoje!</h2>
+      </div>
+    )
+  } else if (error !== '') {
+    content = (
+      <div>
+        <p>Cidade não encontrada</p>
+        <p>Digite uma cidade válida</p>
+      </div>
+    )
+  } else {
+    content = (
+      <>
+        <div>
+          <Current data={data} />
+          <Weeks data={data} />
+        </div>
+        <div>
+          <WeatherDetail />
+        </div>
+      </>
+    )
+  }
   return (
     <div className="h-screen bg-gradient-to-r from-blue-500 to-blue-300 bg-cover">
       <div className="flex h-fit w-full flex-col bg-white/25">
@@ -38,7 +70,7 @@ export default function Home() {
             Clima do Tempo.
           </h1>
         </div>
-        {data.current ? <div>{data.current.temp_c}</div> : null}
+        {content}
       </div>
     </div>
   )
