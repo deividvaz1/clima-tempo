@@ -31,7 +31,7 @@ export function Current({ data }) {
         <span className="text-white">{data.current.condition.text}</span>
       </div>
       <div>
-        <div className="flex items-center rounded-xl bg-white/90 px-2 py-2 text-black">
+        <div className="flex items-center gap-1 rounded-xl bg-white/90 px-2 py-2 text-black">
           <BiCurrentLocation />
           <span>
             {data.location.name}, {data.location.region}
