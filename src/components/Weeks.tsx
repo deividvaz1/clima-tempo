@@ -24,7 +24,7 @@ export function Weeks({ data }: WeeksProps) {
   }
 
   return (
-    <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 ">
+    <div className="-ml-4 grid w-full grid-cols-2 gap-8 sm:ml-7 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-7">
       {data.forecast.forecastday.map((day, index) => (
         <div
           key={index}

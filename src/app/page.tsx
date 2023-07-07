@@ -21,7 +21,7 @@ export default function Home() {
 
       if (currentHour >= 5 && currentHour < 12) {
         greetingText = 'Bom dia'
-      } else if (currentHour >= 12 && currentHour < 17) {
+      } else if (currentHour >= 12 && currentHour < 18) {
         greetingText = 'Boa tarde'
       } else {
         greetingText = 'Boa noite'
@@ -34,7 +34,7 @@ export default function Home() {
     updateGreeting()
 
     // Configura um temporizador para atualizar o cumprimento a cada minuto
-    const intervalId = setInterval(updateGreeting, 60000)
+    const intervalId = setInterval(updateGreeting, 600)
 
     // Limpa o temporizador quando o componente é desmontado
     return () => clearInterval(intervalId)
@@ -107,7 +107,7 @@ export default function Home() {
   const currentHour = new Date().getHours()
   if (currentHour >= 5 && currentHour < 12) {
     icon = <BsFillCloudSunFill fontSize={40} />
-  } else if (currentHour >= 12 && currentHour < 17) {
+  } else if (currentHour >= 12 && currentHour < 18) {
     icon = <FaCloudSun fontSize={40} />
   } else {
     icon = <BsFillCloudMoonFill fontSize={40} />
