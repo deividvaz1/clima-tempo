@@ -64,7 +64,7 @@ export default function Home() {
   let content
   if (Object.keys(data).length === 0 && error === '') {
     content = (
-      <div className="-mt-10 flex h-screen items-center justify-center">
+      <div className=" -mt-10 flex h-screen items-center justify-center rounded-xl">
         <div className="flex justify-end">
           <div className="bg-cloud-1 animate-slideRight mr-auto mt-24 hidden h-64 w-64 bg-cover md:block"></div>
         </div>
