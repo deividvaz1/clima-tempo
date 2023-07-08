@@ -25,7 +25,7 @@ export function Current({ data }: CurrentProps) {
   }
 
   return (
-    <div className="mb-8 flex w-1/2 flex-col items-start gap-2 md:mb-0">
+    <div className="mb-8 flex w-1/2 flex-col items-start gap-2 rounded-2xl  md:mb-0">
       <div className="flex items-center">
         <div>
           <h1 className="text-3xl text-white">Hoje</h1>
@@ -47,7 +47,7 @@ export function Current({ data }: CurrentProps) {
         <span className="text-white">{data.current.condition.text}</span>
       </div>
       <div>
-        <div className="flex items-center gap-1 rounded-xl bg-white/90 px-2 py-2 text-black">
+        <div className="flex items-center gap-1 rounded-xl bg-white/80 px-2 py-2 text-black">
           <BiCurrentLocation />
           <span>
             {data.location.name}, {data.location.region}

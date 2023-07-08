@@ -6,7 +6,28 @@ import { MdAir } from 'react-icons/md'
 import { CiTempHigh } from 'react-icons/ci'
 import { FaEye } from 'react-icons/fa'
 
-export function WeatherDetail({ data }) {
+interface WeatherDetailsProps {
+  data: {
+    current: {
+      wind_kph: number
+      humidity: number
+      wind_dir: string
+      pressure_in: number
+      feelslike_c: number
+      vis_km: number
+    }
+    forecast: {
+      forecastday: {
+        astro: {
+          sunrise: string
+          sunset: string
+        }
+      }[]
+    }
+  }
+}
+
+export function WeatherDetail({ data }: WeatherDetailsProps) {
   return (
     <>
       <div className="p-12">
@@ -88,7 +109,7 @@ export function WeatherDetail({ data }) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Visibilidade</h3>
-              <h3>{data.current.vis_km} km< /h3>
+              <h3>{data.current.vis_km} km</h3>
             </div>
             <div>
               <FaEye fontSize={40} />

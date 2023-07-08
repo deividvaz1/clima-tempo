@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gradient-to-r from-blue-500 to-blue-300 bg-cover;
+}
+
+.bg-cloud {
+  background-image: url('../public/cloud.gif');
+}
+
+.bg-cloud-1 {
+  background-image: url('../public/CLOUD1.png');
+}
+
+.bg-cloud-2 {
+  background-image: url('../public/CLOUD2.png');
+}
+
+@layer utilities {
+  .animate-slideLeft {
+    animation: slideLeft 2.5s ease-out;
+  }
+
+  .animate-slideRight {
+    animation: slideRight 1.3s ease-out;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
