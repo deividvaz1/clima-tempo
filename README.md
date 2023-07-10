@@ -7,7 +7,6 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -50,7 +49,7 @@ npm run dev
 yarn dev
 ```
 
-## 🔖 Layout e Exibição
+## 🔖 Layout
 
 <div align="center">
 <a href="https://imgur.com/LpTe3pV"><img src="https://imgur.com/LpTe3pV.png" title="source: imgur.com" /></a>
