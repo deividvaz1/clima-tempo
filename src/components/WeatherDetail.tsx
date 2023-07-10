@@ -8,7 +8,7 @@ import { FaEye } from 'react-icons/fa'
 
 interface WeatherDetailsProps {
   data: {
-    current: {
+    current?: {
       wind_kph: number
       humidity: number
       wind_dir: string
@@ -16,7 +16,7 @@ interface WeatherDetailsProps {
       feelslike_c: number
       vis_km: number
     }
-    forecast: {
+    forecast?: {
       forecastday: {
         astro: {
           sunrise: string
@@ -37,7 +37,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Vel. do Ar</h3>
-              <h3>{data.current.wind_kph} km/h</h3>
+              <h3>{data?.current?.wind_kph} km/h</h3>
             </div>
             <div>
               <GiWindSlap fontSize={40} />
@@ -48,7 +48,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Umidade do Ar</h3>
-              <h3>{data.current.humidity} %</h3>
+              <h3>{data?.current?.humidity} %</h3>
             </div>
             <div>
               <WiHumidity fontSize={40} />
@@ -59,7 +59,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Direção do Vento</h3>
-              <h3>{data.current.wind_dir}</h3>
+              <h3>{data?.current?.wind_dir}</h3>
             </div>
             <div>
               <GiCompass fontSize={40} />
@@ -70,7 +70,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Nascer do Sol</h3>
-              <h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
+              <h3>{data?.forecast?.forecastday[0].astro.sunrise}</h3>
             </div>
             <div>
               <BsSunrise fontSize={40} />
@@ -80,7 +80,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Por do Sol</h3>
-              <h3>{data.forecast.forecastday[0].astro.sunset}</h3>
+              <h3>{data?.forecast?.forecastday[0].astro.sunset}</h3>
             </div>
             <div>
               <BsSunset fontSize={40} />
@@ -91,7 +91,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Pressão do ar</h3>
-              <h3>{data.current.pressure_in}</h3>
+              <h3>{data?.current?.pressure_in}</h3>
             </div>
             <div>
               <MdAir fontSize={40} />
@@ -100,7 +100,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Sensação térmica</h3>
-              <h3>{data.current.feelslike_c}°</h3>
+              <h3>{data?.current?.feelslike_c}°</h3>
             </div>
             <div>
               <CiTempHigh fontSize={40} />
@@ -109,7 +109,7 @@ export function WeatherDetail({ data }: WeatherDetailsProps) {
           <div className="flex items-center justify-between gap-6 rounded-xl bg-white/50 p-4">
             <div className="text-2xl">
               <h3>Visibilidade</h3>
-              <h3>{data.current.vis_km} km</h3>
+              <h3>{data?.current?.vis_km} km</h3>
             </div>
             <div>
               <FaEye fontSize={40} />

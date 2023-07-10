@@ -2,14 +2,14 @@ import { getCurrentDate } from '@/utils/currentDate'
 import { BiCurrentLocation } from 'react-icons/bi'
 interface CurrentProps {
   data: {
-    current: {
-      condition: {
+    current?: {
+      condition?: {
         icon: string
         text: string
       }
-      temp_c: number
+      temp_c?: number
     }
-    location: {
+    location?: {
       name: string
       region: string
     }
@@ -19,9 +19,17 @@ interface CurrentProps {
 export function Current({ data }: CurrentProps) {
   const currentDate = getCurrentDate()
   const weatherIcon = data?.current?.condition?.icon
+  const tempC = data?.current?.temp_c
+  const locationName = data?.location?.name
+  const locationRegion = data?.location?.region
 
-  if (!weatherIcon) {
-    return null // Renderiza nada se o weatherIcon não estiver disponível
+  if (
+    !weatherIcon ||
+    tempC === undefined ||
+    locationName === undefined ||
+    locationRegion === undefined
+  ) {
+    return null // Renderiza nada se as propriedades não estiverem disponíveis
   }
 
   return (
@@ -41,16 +49,16 @@ export function Current({ data }: CurrentProps) {
       </div>
       <div>
         <p className="text-5xl text-white">
-          {data.current.temp_c.toFixed()}
+          {data?.current?.temp_c?.toFixed()}
           <span>°</span>
         </p>
-        <span className="text-white">{data.current.condition.text}</span>
+        <span className="text-white">{data?.current?.condition?.text}</span>
       </div>
       <div>
         <div className="flex items-center  gap-1 rounded-xl bg-white/80 px-2 py-2 text-black">
           <BiCurrentLocation />
           <span className="text-xl">
-            {data.location.name}, {data.location.region}
+            {data?.location?.name}, {data?.location?.region}
           </span>
         </div>
       </div>

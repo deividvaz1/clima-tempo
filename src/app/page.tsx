@@ -11,7 +11,7 @@ import { FaCloudSun } from 'react-icons/fa'
 export default function Home() {
   const [greeting, setGreeting] = useState('')
   const [data, setData] = useState({})
-  const [location, setLocation] = useState('')
+  const [location, setLocation] = useState<string>('')
   const [error, setError] = useState('')
 
   useEffect(() => {

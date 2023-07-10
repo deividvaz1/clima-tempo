@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface DiaForecast {
   date: string
   day: {
@@ -12,14 +14,14 @@ interface DiaForecast {
 
 interface WeeksProps {
   data: {
-    forecast: {
+    forecast?: {
       forecastday: DiaForecast[]
     }
   }
 }
 
 export function Weeks({ data }: WeeksProps) {
-  if (!data || !data.forecast || !data.forecast.forecastday) {
+  if (!data?.forecast?.forecastday) {
     return null // ou exiba uma mensagem de erro adequada
   }
 

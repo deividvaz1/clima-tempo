@@ -1,9 +1,10 @@
 'use client'
+import React from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
 
-interface InputProps {
-  handleSearch: (event: React.KeyboardEvent<HTMLInputElement>) => void
-  setLocation: React.Dispatch<React.SetStateAction<String>>
+type InputProps = {
+  handleSearch: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  setLocation: React.Dispatch<React.SetStateAction<string>>
 }
 
 export function Input({ handleSearch, setLocation }: InputProps) {
